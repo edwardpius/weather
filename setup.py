@@ -12,5 +12,10 @@ setup(
     author_email='e.pius@computer.org',
     packages=find_packages('src'),
     package_dir={'': 'src'},
-    install_requires=[]
+    install_requires=['requests'],
+    entry_points={
+        'console_scripts': [
+            'weather=weather.cli:main',
+        ]
+    }
 )
